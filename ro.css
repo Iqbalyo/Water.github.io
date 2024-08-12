@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+.cardh {
+    background-color: #007bff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    width: 50%;
+    margin: 10px 5px 10px 10px;
+  }
+  
+  .cardh h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .cardh p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+

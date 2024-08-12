@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ro.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">Water</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="#" class="active">Beranda</a>
+                </li>
+                <li>
+                    <a href="#Informasi" >Informasi dan layanan</a>
+                </li>
+                <li>
+                    <a href="#tentangweb" >tentang kami</a>
+                </li>
+                <li>
+                    <a href="#footers" >kontak</a>
+                </li>
+                <button class="login-btn " id="openPopup">Masuk</button>
+            </ul>
+        </nav>
+        <div class="login-popup" id="loginPopup">
+            <div class="popup-content">
+                <span class="close" id="closePopup">&times;</span>
+                <h2 class="title">WATER</h2>
+                <form>
+                    <!-- <div class="input-container">
+                        <img src="/src/img/icons/username-icon.png" alt="icon" class="input-icon">
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                    </div> -->
+                     <div class="input-container">
+                        <img src="/src/img/icons/email-icon.png" alt="icon" class="input-icon">
+                        <input type="text" id="Email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <!-- <div class="input-container">
+                        <img src="/src/img/icons/phone_number-icon.png" alt="icon" class="input-icon">
+                        <input type="text" id="nohp" name="nohp" placeholder="Number" required>
+                    </div> --> 
+                    <div class="input-container">
+                        <img src="/src/img/icons/password-icon.png" alt="icon" class="input-icon">
+                        <input type="password" id="Password" name="password" placeholder="Password" required>
+                    </div>
+                    <label for="show-password" class="show-password-label">
+                        <input type="checkbox" id="show-password" onclick="togglePassword()"> Show Password
+                    </label>
+                    <br>
+                    <button type="submit" class="Log" id="signIn">Login</button>
+                    
+                </form>
+                <p class="text-login">Tidak punya akun? <br><br><a href="#" id="switchToRegister" class="reg">Register</a></p>
+            </div>
+        </div>
+        <div class="register-popup" id="registerPopup" style="display: none;">
+            <div class="popup-content">
+                <span class="close" id="closeRegisterPopup">&times;</span>
+                <h2 class="title">WATER</h2>
+                <form id="registerForm">
+                    <!-- <div class="input-container">
+                        <img src="/src/img/icons/username-icon.png" alt="icon" class="input-icon">
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                    </div> -->
+                    <div class="input-container">
+                        <img src="/src/img/icons/email-icon.png" alt="icon" class="input-icon">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-container">
+                        <img src="/src/img/icons/password-icon.png" alt="icon" class="input-icon">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <!-- <div class="input-container">
+                        <img src="/src/img/icons/phone_number-icon.png" alt="icon" class="input-icon">
+                        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="phone number" required>
+                    </div> -->
+                    <button type="submit" class="Log" id="signUp">Register</button>
+                </form>
+                <p>Sudah punya akun? <a href="#" id="switchToLogin" class="reg" onclick="login()">Login</a></p>
+            </div>
+        </div>
+    </header>
+<!-- 1 -->
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>air minum berkualitas,</h1>
+        <p>langsung antar ke rumah! Pesan sekarang di water</p>
+        <button class="cta-btn"><a href="#ListProduk" >Telusuri</a></button>
+    </div>
+    <div class="hero-image">
+        <img src="/src/img/delivery.png" alt="Pengiriman Air">
+    </div>
+</section>
+<div class="container" >
+    <div class="kategori">
+        <h1>Kategori Pilihan</h1>
+    </div>
+    <div class="card-container">
+        <a href="" class="card2-link">
+    <div class="card">
+        <img src="/src/img/lemineral.png" alt="">
+        <h1>Le Mineral</h1>
+    </div>
+        </a>
+        <a href="" class="card2-link">
+    <div class="card">
+        <img src="/src/img/terass.png" alt="">
+        <h1>Teras</h1>
+    </div>
+        </a>
+        <a href="" class="card2-link">
+    <div class="card">
+        <img src="/src/img/club.png" alt="">
+        <h1>Club</h1>
+    </div>
+        </a>
+        <a href=""  class="card2-link">
+    <div class="card">
+        <img src="/src/img/grand.png" alt="">
+        <h1>Grand</h1>
+    </div>
+        </a>
+    <div class="sidebar"><div class="textpesan"><h1>Pesan Sekarang <br> Dari Rumah</h1></div></div>
+</div>
+</div>
+<!-- card 2 -->
+<div class="container" >
+    <div class="kategori" id="ListProduk">
+        <h1>Bayar Di tempat</h1>
+    </div>
+    <div class="card-container" id="ListProduk">
+        <a href="/produk/produk.html" target="_blank"  class="card2-link">
+        <div class="card2">
+            <img class="img" src="src/img/lemineral.png" alt="">
+            <div class="label-sehat">Pasti Sehat</div>
+            <h2>Le Mineral</h2>
+            <p class="harga">Rp 20.000</p>
+        <p class="daerah">Jakarta</p>
+        <div class="rating">
+            <span class="bintang">⭐</span>
+            <span class="nilai">4.9</span>
+            <span class="terjual">60+ terjual</span>
+        </div>
+        </div>
+    </a>
+    <a href="" target="_blank"  class="card2-link">
+        <div class="card2">
+            <img class="img" src="src/img/club.png  " alt="">
+            <div class="label-sehat">Pasti Sehat</div>
+            <h2>Club</h2>
+            <p class="harga">Rp 10.000</p>
+        <p class="daerah">Jakarta</p>
+        <div class="rating">
+            <span class="bintang">⭐</span>
+            <span class="nilai">4.5</span>
+            <span class="terjual">30+ terjual</span>
+        </div>
+        </div>
+    </a>
+    <a href="" target="_blank"  class="card2-link">
+        <div class="card2">
+            <img class="img" src="src/img/grand.png" alt="">
+            <div class="label-sehat">Pasti Sehat</div>
+            <h2>Grand</h2>
+            <p class="harga">Rp 10.000</p>
+            <p class="daerah">Jakarta</p>
+            <div class="rating">
+                <span class="bintang">⭐</span>
+                <span class="nilai">4.7</span>
+                <span class="terjual">100+ terjual</span>
+            </div>
+        </div>
+    </a>
+    <a href="" target="_blank"  class="card2-link">
+        <div class="card2">
+            <img class="img" src="src/img/terass.png" alt="">
+            <div class="label-sehat">Pasti Sehat</div>
+            <h2>Tirmas</h2>
+            <p class="harga">Rp 9.000</p>
+            <p class="daerah">Jakarta</p>
+            <div class="rating">
+                <span class="bintang">⭐</span>
+                <span class="nilai">4.7</span>
+                <span class="terjual">300+ terjual</span>
+            </div>
+        </div>
+    </a>
+    <a href="" target="_blank"  class="card2-link">
+        <div class="card2">
+            <img class="img" src="src/img/mi.png" alt="">
+            <div class="label-sehat">Pasti Sehat</div>
+            <h2>Mindy</h2>
+            <p class="harga">Rp 11.000</p>
+            <p class="daerah">Jakarta</p>
+            <div class="rating">
+                <span class="bintang">⭐</span>
+                <span class="nilai">4.9</span>
+                <span class="terjual">30+ terjual</span>
+            </div>
+        </div>
+    </a>
+        </div>
+       
+    </div>
+</div>
+<!-- ro -->
+<div class="container">
+    <div class="kategori">
+        <h1>Isi Ulang Air RO</h1>
+    </div>  
+    <div class="card-container">
+        <a href="" target="_blank"  class="card2-link">
+        <div class="card2">
+            <img class="img" src="src/img/gallon.png" alt="">
+            <div class="label-sehat">Pasti Sehat</div>
+            <h2>Air Mineral RO</h2>
+            <p class="harga">Rp 6.000</p>
+        <p class="daerah">Jakarta</p>
+        <div class="rating">
+            <span class="bintang">⭐</span>
+            <span class="nilai">4.9</span>
+            <span class="terjual">300+ terjual</span>
+        </div>
+        </div>
+    </a>
+    
+<div class="cardh" >
+    <h2 >Alasan Menggunakan Air Minum RO</h2>
+    <p>Air minum RO memberikan banyak manfaat kesehatan karena melalui proses penyaringan yang ketat yang menghilangkan kontaminan berbahaya. Dengan menggunakan air RO, Anda dapat mengurangi risiko terkena penyakit yang disebabkan oleh logam berat, pestisida, dan bahan kimia lainnya. Selain itu, air RO memiliki rasa yang lebih segar dan bersih, serta dapat digunakan untuk berbagai kebutuhan rumah tangga dengan lebih aman.</p>
+  </div>
+        </div>
+    </div>
+</div>
+<!-- section  -->
+
+<section class="features" id="Informasi">
+    <div class="feature">
+        <div class="jam-icon">
+            <img src="src/img/jam-icon.png" alt="Ikon Jam">
+        </div>
+        <h2>Mengapa Memilih water ?</h2>
+        <p>Kami menyediakan berbagai pilihan air minum berkualitas, dari air mineral alami hingga air RO, dengan berbagai ukuran galon yang sesuai dengan kebutuhan Anda, pemesanan mudah dan harga yang terjangkau</p>
+    </div>
+    <div class="feature">
+        <h2>Bosan dengan cara lama memesan air minum yang merepotkan?</h2>
+        <p>Kini, Anda bisa mendapatkan air minum berkualitas dengan mudah dan cepat melalui website ini, silakan login untuk melihat fiturnya</p>
+        <div class="centang-icon">
+            <img src="src/img/centang-icon.png" alt="Ikon Centang">
+        </div>
+    </div>
+</section>
+<article>
+    <div class="about" id="tentangweb">
+        <h1 class="kami">Tentang Kami</h1>
+        
+    </div>
+    <p class="sip">WATER adalah platform pemesanan air minum dan isi ulang online yang memudahkan Anda untuk mendapatkan air minum berkualitas dengan cara yang praktis dan nyaman. Kami berkomitmen untuk menyediakan air minum yang aman, sehat, dan menyegarkan bagi keluarga Indonesia.</p>
+</article>
+<footer class="footer" id="footers">
+    <h2>Capstone Dicoding batch 6</h2>
+    <span class="vertical-line"></span>
+    <div class="contact-info">
+        <p>WA: +62 812-3456-7890</p>
+        <p>Email: info@example.com</p>
+    </div>
+    <div class="rights">
+        &copy; 2024 All rights reserved
+    </div>
+</footer>
+    <script src="script.js"></script>
+    <script type="module" src="register.js" defer></script>
+    <script type="module" src="login.js" defer></script>
+    <script src="pw.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belanja Air Minum</title>
+  <link rel="stylesheet" href="i.css">
+</head>
+<body>
+  <header>
+    <h1>Produk Air Minum</h1>
+  </header>
+
+  <div class="container">
+    <div class="products">
+      <div class="product">
+        <img src="air-minum.jpg" alt="Air Minum">
+        <h2>Air Mineral</h2>
+        <p>Harga: Rp 5.000</p>
+        <button onclick="addToCart('Air Mineral', 5000)">Tambahkan ke Keranjang</button>
+      </div>
+      <!-- Tambahkan produk lain di sini sesuai kebutuhan -->
+    </div>
+
+    <div class="cart">
+      <h2>Keranjang Belanja</h2>
+      <ul id="cart-items">
+        <!-- Item keranjang akan ditambahkan melalui JavaScript -->
+      </ul>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+
+  <div id="overlay" class="overlay"></div>
+  <div id="popup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <div id="popup-content"></div>
+  </div>
+
+  <script src="s.js"></script>
+</body>
+</html>

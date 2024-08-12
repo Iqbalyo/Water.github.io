@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk</title>
+    <link rel="stylesheet" href="/produk/styleP.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- library --> <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <header-component></header-component>
+    <br>
+    <div class="container">
+        <div class="product-card">
+            <img src="/src/img/club.png" alt="minuman">
+            <h2>Club Mineral</h2>
+        </div>
+        
+        <div class="product-info">
+            <h1>Club Mineral Galon 15 L</h1>
+            <p> 
+                Club Mineral adalah merek air mineral berkualitas dari Indonesia, yang menawarkan kesegaran alami dan murni dari sumber mata air pegunungan. Dengan proses filtrasi yang ketat dan teknologi canggih, Club Mineral memastikan setiap tetes air yang Anda nikmati terjaga kemurniannya. Cocok untuk memenuhi kebutuhan hidrasi sehari-hari, Club Mineral adalah pilihan tepat bagi Anda yang mengutamakan kesehatan dan kualitas.</p>
+            <div class="more-text">
+                <p> 
+                    Club Mineral adalah merek air mineral berkualitas dari Indonesia, yang menawarkan kesegaran alami dan murni dari sumber mata air pegunungan. Dengan proses filtrasi yang ketat dan teknologi canggih, Club Mineral memastikan setiap tetes air yang Anda nikmati terjaga kemurniannya. Keunggulan Club Mineral meliputi kualitas terjamin melalui proses filtrasi berlapis untuk memastikan kemurnian dan bebas kontaminan, sumber alami dari mata air pegunungan yang kaya akan mineral, rasa segar yang ideal untuk kebutuhan hidrasi sehari-hari, serta kemasan praktis yang tersedia dalam berbagai ukuran untuk kebutuhan di rumah atau saat bepergian. Club Mineral adalah pilihan tepat bagi Anda yang mengutamakan kesehatan dan kualitas.
+</p>
+
+            </div>
+            <span class="show-more" onclick="toggleText()">Lihat lebih banyak</span>
+            <p><strong>Harga:</strong> Rp 10,000</p>
+            <button class="buy-btn">Beli Sekarang</button>
+            <button class="buy-btnK" onclick="addToCart('Le Mineral', 10000)">Masukkan keranjang</button>
+        </div>
+    </div>
+
+    <div id="checkout-popup" class="popup">
+        <span class="close" onclick="closePopup('checkout-popup')">&times;</span>
+        <div id="checkout-content">
+            <h2>Checkout</h2>
+            <label for="name">Nama:</label>
+            <input type="text" id="name" required>
+            <label for="phone">Nomor HP:</label>
+            <input type="text" id="phone" required>
+            <label for="address">Alamat:</label>
+            <textarea id="address" required></textarea>
+            <label for="payment">Metode Pembayaran:</label><br>
+            <input type="checkbox" id="cod" name="payment" value="COD">
+            <label for="cod">COD</label><br>
+            <input type="checkbox" id="dana" name="payment" value="Dana">
+            <label for="dana">Transfer Dana : 083156658992</label><br><br>
+            <button onclick="proceedToCheckout()">Checkout</button>
+        </div>
+    </div>
+    <div class="cart">
+        <h2>Keranjang Anda</h2>
+        <ul id="cart-items">
+          <!-- Item keranjang akan ditambahkan melalui JavaScript -->
+        </ul>
+        
+        <button onclick="openCheckoutPopup()">Checkout</button>
+      </div>
+      <div id="overlay" class="overlay" onclick="closePopup()"></div>
+  <div id="popup" class="popup">
+    <span class="close" onclick="closePopup('popup')">&times;</span>
+
+    <div id="popup-content"></div>
+  </div>
+
+
+
+
+    <script src="/header-component.js" defer></script>
+    <script src="/produk/more.js" defer></script>
+    <script src="/produk/nav.js" defer></script>
+    <script src="/produk/cart.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+* {
+    
+    box-sizing: border-box;
+    list-style: none;
+    color: inherit;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product-info {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 2;
+}
+
+.product-info h1 {
+    margin-top: 0;
+}
+
+.buy-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #009bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.buy-btn:hover {
+    background-color: #0A90AD;
+}
+.buy-btnK {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:   #FF3333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* more */
+.more-text {
+    display: none;
+  }
+  .show-more {
+    color: #009bff;
+    cursor: pointer;
+  }
+  header-component {
+    position: relative;
+    z-index: 1000;
+}
+
+
+
+
+/* cart */
+.cart {
+    flex: 1;
+    width: 630px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    margin-left: 20px;
+    
+}
+
+.cart h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cart ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.cart p#total-price {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cart button {
+    display: block;
+    width: 100px;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cart button:hover {
+    background-color: #218838;
+}
+/*  */
+
+
+
+/* add */
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 101;
+    width: 600px; /* Sesuaikan lebar popup sesuai kebutuhan */
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #888;
+}
+
+#checkout-content {
+    margin-bottom: 20px; /* Jarak antara isi popup dengan background biru */
+}
+
+#checkout-content h2 {
+    font-size: 1.5em; /* Ukuran font judul checkout */
+    margin-bottom: 10px; /* Jarak bawah judul checkout */
+}
+
+#checkout-content label {
+    display: block;
+    margin-top: 10px;
+}
+
+#checkout-content input[type="text"],
+#checkout-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#checkout-content textarea {
+    height: 80px; /* Tinggi textarea */
+    resize: vertical; /* Biarkan textarea dapat diresize secara vertikal */
+}
+
+#checkout-content button {
+    background-color: #3498db; /* Warna latar belakang tombol */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#checkout-content button:hover {
+    background-color: #2980b9; /* Warna latar belakang tombol saat hover */
+}
+
+#checkout-popup::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -20px; /* Menyesuaikan jarak bawah background */
+    left: 0;
+    width: 100%;
+    height: 40px; /* Tinggi background biru */
+    background-color: #3498db; /* Warna biru */
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+  
+  .popup-content {
+    text-align: center;
+  }
+  
+/*  */
+/* responsive */
+@media (max-width:592px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 150px;
+    }
+
+    
+    .product-card, .product-info {
+
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-card {
+        margin-bottom: 20px;
+    }
+
+    .product-card img {
+        width: 50%;
+    }
+}

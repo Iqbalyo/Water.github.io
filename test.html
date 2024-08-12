@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">Water</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="#" class="active">Beranda</a>
+                </li>
+                <li>
+                    <a href="#Informasi" >Informasi dan layanan</a>
+                </li>
+                <li>
+                    <a href="#tentangweb" >tentang kami</a>
+                </li>
+                <li>
+                    <a href="#footers" >kontak</a>
+                </li>
+                
+                <button class="login-btn " id="openPopup"><i class="fa fa-user" aria-hidden="true"></i></button>
+            </ul>
+        </nav>
+        <div class="login-popup" id="loginPopup">
+            <div class="popup-content">
+                <span class="close" id="closePopup">&times;</span>
+                <h2 class="title">WATER</h2>
+                <form>
+                    <!-- <div class="input-container">
+                        <img src="/src/img/icons/username-icon.png" alt="icon" class="input-icon">
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                    </div> -->
+                     <div class="input-container">
+                        <img src="/src/img/icons/email-icon.png" alt="icon" class="input-icon">
+                        <input type="text" id="Email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <!-- <div class="input-container">
+                        <img src="/src/img/icons/phone_number-icon.png" alt="icon" class="input-icon">
+                        <input type="text" id="nohp" name="nohp" placeholder="Number" required>
+                    </div> --> 
+                    <div class="input-container">
+                        <img src="/src/img/icons/password-icon.png" alt="icon" class="input-icon">
+                        <input type="password" id="Password" name="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="Log" id="signIn">Login</button>
+                </form>
+                <p class="text-login">Tidak punya akun? <br><br><a href="#" id="switchToRegister" class="reg">Register</a></p>
+            </div>
+        </div>
+        <div class="register-popup" id="registerPopup" style="display: none;">
+            <div class="popup-content">
+                <span class="close" id="closeRegisterPopup">&times;</span>
+                <h2 class="title">WATER</h2>
+                <form id="registerForm">
+                    <!-- <div class="input-container">
+                        <img src="/src/img/icons/username-icon.png" alt="icon" class="input-icon">
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                    </div> -->
+                    <div class="input-container">
+                        <img src="/src/img/icons/email-icon.png" alt="icon" class="input-icon">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-container">
+                        <img src="/src/img/icons/password-icon.png" alt="icon" class="input-icon">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <!-- <div class="input-container">
+                        <img src="/src/img/icons/phone_number-icon.png" alt="icon" class="input-icon">
+                        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="phone number" required>
+                    </div> -->
+                    <button type="submit" class="Log" id="signUp">Register</button>
+                </form>
+                <p>Sudah punya akun? <a href="#" id="switchToLogin" class="reg" onclick="login()">Login</a></p>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
